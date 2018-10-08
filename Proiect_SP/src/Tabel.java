@@ -1,7 +1,7 @@
 
 public class Tabel {
 
-  String numeTabel;
+ private String numeTabel;
 
   public Tabel(String numeTabel) {
     this.numeTabel = numeTabel;

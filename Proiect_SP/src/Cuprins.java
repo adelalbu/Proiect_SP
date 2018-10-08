@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Cuprins {
 
-  List<Capitol> capitole = new ArrayList<Capitol>();
+  private List<Capitol> capitole = new ArrayList<Capitol>();
 
   public List<Capitol> getCapitole() {
     return capitole;

@@ -1,7 +1,7 @@
 
 public class Text {
 
-  public String someText;
+  private String someText;
 
   public Text(String someText) {
     this.someText = someText;

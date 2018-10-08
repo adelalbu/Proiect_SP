@@ -6,8 +6,6 @@ public class MainClass {
   public static void main(String[] args) {
     Carte c1 = new Carte("Povestea lui Harap-Alb");
 
-    // System.out.println(c1);
-
     List<Text> texte = new ArrayList<Text>();
     texte.add(new Text("A fost odata ca niciodata..."));
     texte.add(new Text("Harap-Alb mergea prin padure cand deodata...."));

@@ -1,6 +1,6 @@
 
 public class Imagine {
-  public String numeImagine;
+  private String numeImagine;
 
   public Imagine(String numeImagine) {
     this.numeImagine = numeImagine;

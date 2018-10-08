@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Capitol {
-  public String numeCapitol;
-  public List<Subcapitol> listaSubcapitole = new ArrayList<Subcapitol>();
+  private String numeCapitol;
+  private List<Subcapitol> listaSubcapitole = new ArrayList<Subcapitol>();
 
   public Capitol(String numeCapitol, List listaSubcapitole) {
     this.numeCapitol = numeCapitol;
@@ -12,7 +12,7 @@ public class Capitol {
 
   @Override
   public String toString() {
-    return numeCapitol + "\nSubcapitole: " + listaSubcapitole;
+    return "\n" + numeCapitol + "\nSubcapitole: " + listaSubcapitole;
   }
 
   public String getNumeCapitol() {

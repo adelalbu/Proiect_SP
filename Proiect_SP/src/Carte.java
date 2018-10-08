@@ -3,10 +3,10 @@ import java.util.List;
 
 public class Carte {
 
-  public String title;
-  public Autor autor;
-  public Cuprins cuprins;
-  public List<Capitol> listaCapitole = new ArrayList<Capitol>();
+  private String title;
+  private Autor autor;
+  private Cuprins cuprins;
+  private List<Capitol> listaCapitole = new ArrayList<Capitol>();
 
   public Carte(String title) {
     this.title = title;

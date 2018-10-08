@@ -3,10 +3,10 @@ import java.util.List;
 
 public class Subcapitol {
 
-  public String numeSubcap;
-  public List<Text> listaText = new ArrayList<Text>();
-  public List<Imagine> listaImagini = new ArrayList<Imagine>();
-  public List<Tabel> listaTabele = new ArrayList<Tabel>();
+  private String numeSubcap;
+  private List<Text> listaText = new ArrayList<Text>();
+  private List<Imagine> listaImagini = new ArrayList<Imagine>();
+  private List<Tabel> listaTabele = new ArrayList<Tabel>();
 
   public Subcapitol(String numeSubcap, List listaText, List listaImagini, List listaTabele) {
     this.numeSubcap = numeSubcap;
