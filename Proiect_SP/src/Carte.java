@@ -5,7 +5,7 @@ public class Carte {
 
   private String title;
   private Autor autor;
-  private Cuprins cuprins;
+  // private Cuprins cuprins;
   private List<Capitol> listaCapitole = new ArrayList<Capitol>();
 
   public Carte(String title) {
@@ -19,36 +19,59 @@ public class Carte {
     return title;
   }
 
-  public Autor getAutor() {
-    return autor;
-  }
-
-  public void setAutor(Autor autor) {
-    this.autor = autor;
-  }
-
-  public List<Capitol> getListaCapitole() {
-    return listaCapitole;
-  }
-
-  public void setListaCapitole(List<Capitol> listaCapitole) {
-    this.listaCapitole = listaCapitole;
-  }
-
   public void setTitle(String title) {
     this.title = title;
   }
 
-  @Override
+  /*public Autor getAutor() {
+    return autor;
+  }
+  
+  public void setAutor(Autor autor) {
+    this.autor = autor;
+  }
+  
+  public List<Capitol> getListaCapitole() {
+    return listaCapitole;
+  }
+  
+  public void setListaCapitole(List<Capitol> listaCapitole) {
+    this.listaCapitole = listaCapitole;
+  }*/
+
+  /* @Override
   public String toString() {
     return "Nume carte: " + this.title + "\nAutor: " + this.autor + "\nCuprins: " + this.cuprins + "\nCapitole:\n" + this.listaCapitole;
+  
+  }
+  
+  *//**
+      * @param cuprins
+      *//*
+          public void setCuprins(Cuprins cuprins) {
+          this.cuprins = cuprins;
+          }*/
 
+  @SuppressWarnings("hiding")
+  public void addAuthor(Autor autor) {
+    this.autor = autor;
   }
 
-  /**
-   * @param cuprins
-   */
-  public void setCuprins(Cuprins cuprins) {
-    this.cuprins = cuprins;
+  public int createChapter(String numeCapitol) {
+    listaCapitole.add(new Capitol(numeCapitol));
+    return listaCapitole.size() - 1;
   }
+
+  public Capitol getChapter(int indexOfChapter) {
+    return listaCapitole.get(indexOfChapter);
+  }
+
+  public void print() {
+    System.out.println("Carte: " + title);
+    autor.print();
+    for (Capitol chapter : listaCapitole) {
+      chapter.print();
+    }
+  }
+
 }

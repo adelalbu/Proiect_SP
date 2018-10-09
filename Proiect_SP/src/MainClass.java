@@ -1,47 +1,41 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class MainClass {
 
   public static void main(String[] args) {
     Carte c1 = new Carte("Povestea lui Harap-Alb");
+    Autor autor = new Autor("Ion Creanga");
 
-    List<Text> texte = new ArrayList<Text>();
-    texte.add(new Text("A fost odata ca niciodata..."));
-    texte.add(new Text("Harap-Alb mergea prin padure cand deodata...."));
+    c1.addAuthor(autor);
 
-    List<Text> texte2 = new ArrayList<Text>();
-    texte2.add(new Text("Si au trait fericiti..."));
+    //capitolul 1
 
-    List<Imagine> imagini = new ArrayList<Imagine>();
-    imagini.add(new Imagine("Harap-Alb"));
-    List<Imagine> imagini2 = new ArrayList<Imagine>();
-    imagini2.add(new Imagine("Printesa"));
+    int indexOfChapterOne = c1.createChapter("Capitolul 1");
+    Capitol chapter1 = c1.getChapter(indexOfChapterOne);
+    int indexOfSubChapterOneOne = chapter1.createSubCap("Partea I");
+    Subcapitol scOneOne = chapter1.getSubcapitol(indexOfSubChapterOneOne);
+    scOneOne.createText("Text: A fost odata ca niciodata...");
+    scOneOne.createText("Text: Harap-Alb a mers sa isi aleaga un cal...");
+    scOneOne.createImage("Imagine: Harap-Alb si Imparatul");
+    scOneOne.createText("Text: Dintr-o data ii iese in cale Spanul.");
+    scOneOne.createTable("Tabel simplu");
 
-    List<Tabel> tabele = new ArrayList<Tabel>();
-    tabele.add(new Tabel("TabelSimplu"));
+    int indexOfSubChapterOneTwo = chapter1.createSubCap("Partea II");
+    Subcapitol scOneTwo = chapter1.getSubcapitol(indexOfSubChapterOneTwo);
+    scOneTwo.createText("Text: Spanul il pacaleste pe Harap-Alb...");
+    scOneTwo.createText("Text: ... ii fura identitatea si il lasa inchis in fantana.");
+    scOneTwo.createImage("Imagine: Spanul");
+    scOneTwo.createText("Text: Harap-Alb se intalneste cu...");
+    scOneTwo.createTable("Tabel 2");
+    scOneTwo.createText("Text: Si asa au reusit sa scape.");
 
-    List<Subcapitol> subcapitole = new ArrayList<Subcapitol>();
-    subcapitole.add(new Subcapitol("Partea I", texte, imagini, tabele));
+    //capitolul 2
 
-    List<Subcapitol> subcapitole2 = new ArrayList<Subcapitol>();
-    subcapitole2.add(new Subcapitol("Partea II", texte2, imagini2, tabele));
+    int indexOfChapterTwo = c1.createChapter("Capitolul 2");
+    Capitol chapter2 = c1.getChapter(indexOfChapterTwo);
+    int indexOfSubChapterTwoOne = chapter2.createSubCap("Partea I");
+    Subcapitol scTwoOne = chapter2.getSubcapitol(indexOfSubChapterTwoOne);
+    scTwoOne.createText("Text: Setila atunci se ia dupa Harap-Alb si pornesc tuspatru inainte.");
 
-    /*  List<Subcapitol> subcapitole2 = new ArrayList<Subcapitol>();
-    subcapitole2.add(new Subcapitol("Partea III", texte, imagini, tabele)); */
-
-    List<Capitol> capitole = new ArrayList<Capitol>();
-    capitole.add(new Capitol("Capitolul 1", subcapitole));
-    capitole.add(new Capitol("Capitolul 2", subcapitole2));
-    //  capitole.add(new Capitol("Capitolul 3", subcapitole));
-
-    Cuprins cuprins = new Cuprins(capitole);
-
-    c1.setAutor(new Autor("Ion Creanga"));
-    c1.setCuprins(cuprins);
-    c1.setListaCapitole(capitole);
-
-    System.out.println(c1);
+    c1.print();
 
   }
 
