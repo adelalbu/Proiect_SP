@@ -1,3 +1,4 @@
+package withoutcomposite;
 
 public class Imagine extends Element {
   private String numeImagine;

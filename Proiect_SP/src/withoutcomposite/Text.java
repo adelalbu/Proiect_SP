@@ -1,3 +1,4 @@
+package withoutcomposite;
 
 public class Text extends Element {
 

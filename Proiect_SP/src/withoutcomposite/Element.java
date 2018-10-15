@@ -1,3 +1,4 @@
+package withoutcomposite;
 
 public abstract class Element {
 

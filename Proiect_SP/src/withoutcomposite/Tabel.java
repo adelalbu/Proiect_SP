@@ -1,3 +1,4 @@
+package withoutcomposite;
 
 public class Tabel extends Element {
 
