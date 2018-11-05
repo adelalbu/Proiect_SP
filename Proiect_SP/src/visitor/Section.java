@@ -1,5 +1,5 @@
 
-package withcomposite;
+package visitor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +50,13 @@ public class Section implements Element {
   @Override
   public Element getElement(int index) {
     return this.elemente.get(index);
+  }
+
+  @Override
+  public void accept(Visitor visitor) {
+    for (Element element : elemente) {
+      element.accept(visitor);
+    }
   }
 
 }
