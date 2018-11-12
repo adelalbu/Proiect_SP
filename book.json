@@ -7,15 +7,15 @@
       "title": "Chapter 1: Introduction to Design Patterns",
       "children": [
         {
-          "class": "Paragraph",
+          "class": "Text",
           "text": "This is the introductory\nparagraph. The white\nfox jump over the green fence."
         },
         {
-          "class": "ImageProxy",
+          "class": "ImagineProxy",
           "url": "figure1.png"
         },
         {
-          "class": "Paragraph",
+          "class": "Text",
           "text": "This is the 2nd paragraph of Chapter 1."
         }
       ]
@@ -25,15 +25,15 @@
       "title": "Chapter 2: Creational Patterns",
       "children": [
         {
-          "class": "Paragraph",
+          "class": "Text",
           "text": "Para 2.1."
         },
         {
-          "class": "Image",
+          "class": "Imagine",
           "url": "figure2.png"
         },
         {
-          "class": "Paragraph",
+          "class": "Text",
           "text": "Para 2.2."
         }
       ]
